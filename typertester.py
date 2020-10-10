@@ -8,7 +8,7 @@ import random
 import difflib
 import time
 
-DICT = config.dict # Get rid of any duplicates
+DICT = config.dict
 SPRINT_LEN = config.sprintLen
 TEXT_INVISIBLE = config.textInvisible
 Sentence = []
@@ -31,8 +31,8 @@ def getDiff(cases):
 
 def getIncorrectChars(diff):
     final = []
-    for x in range(len(diff)): # outer tuple
-        for i in range(len(diff[x])): # inner lists
+    for x in range(len(diff)): 
+        for i in range(len(diff[x])): 
             if diff[x][i][0][0] != "-":
                 final.append(diff[x][i][0][1:])
     return final
